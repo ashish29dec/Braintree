@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Credit Card Uploader</string>
+    <string name="credit_card">Credit Card Number</string>
+    <string name="expiration">Expiration</string>
+    <string name="cvv">CVV</string>
+    <string name="submit">Submit</string>
+    <string name="mm_yy_hint">MM/YY</string>
+    <string name="exp_error">Please enter valid expiration in MM/YY format</string>
+    <string name="cvv_error">CVV should be %1$d number long.</string>
+    <string name="number_error">Please enter a valid credit card number</string>
+    <string name="success">Success</string>
+</resources>

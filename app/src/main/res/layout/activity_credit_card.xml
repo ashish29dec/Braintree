@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/padding_rl"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:id="@+id/id_number_logo_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/padding_tb">
+
+        <LinearLayout
+            android:id="@+id/id_number_container"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/id_credit_card_number_label"
+                android:text="@string/credit_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/textview_text_size" />
+            <EditText
+                android:id="@+id/id_credit_card_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:maxLength="16"
+                android:textSize="@dimen/textview_text_size"/>
+            <TextView
+                android:id="@+id/id_number_error"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/number_error"
+                android:visibility="gone"
+                android:textColor="@color/red"
+                android:textSize="@dimen/error_size"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/id_credit_card_logo"
+            android:layout_width="@dimen/logo_width"
+            android:layout_height="@dimen/logo_height"
+            android:paddingLeft="@dimen/padding_logo_left"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/id_expiration_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/id_number_logo_container"
+        android:paddingBottom="@dimen/padding_tb"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/id_expiration_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/expiration"
+            android:textSize="@dimen/textview_text_size"/>
+        <EditText
+            android:id="@+id/id_expiration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLength="5"
+            android:hint="@string/mm_yy_hint"
+            android:inputType="date"
+            android:textSize="@dimen/textview_text_size"/>
+        <TextView
+            android:id="@+id/id_expiration_error"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/exp_error"
+            android:visibility="gone"
+            android:textColor="@color/red"
+            android:textSize="@dimen/error_size"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/id_cvv_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/id_expiration_container"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/padding_tb">
+
+        <TextView
+            android:id="@+id/id_cvv_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/cvv"
+            android:textSize="@dimen/textview_text_size"/>
+        <EditText
+            android:id="@+id/id_cvv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:maxLength="3"
+            android:hint="@string/cvv"
+            android:textSize="@dimen/textview_text_size"/>
+        <TextView
+            android:id="@+id/id_cvv_error"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:textColor="@color/red"
+            android:textSize="@dimen/error_size"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/id_submit"
+        android:text="@string/submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/id_cvv_container"/>
+
+    <TextView
+        android:id="@+id/id_success"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/id_submit"
+        android:text="@string/success"
+        android:visibility="gone"
+        android:textSize="@dimen/success_text_size"
+        android:padding="@dimen/success_padding"
+        android:gravity="center_vertical"/>
+</RelativeLayout>
